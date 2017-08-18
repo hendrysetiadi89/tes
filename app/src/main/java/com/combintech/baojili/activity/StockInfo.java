@@ -30,7 +30,7 @@ public class StockInfo extends Fragment {
         ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.pager);
         ((MainActivity) getActivity())
                 .setActionBarTitle("Info Stok");
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new StockByLocation(), "Stok by Lokasi");
         adapter.addFragment(new StockByItem(), "Stok by Item");
         viewPager.setAdapter(adapter);

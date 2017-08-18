@@ -44,6 +44,7 @@ import java.util.regex.Pattern;
  */
 
 public class AddAnggota extends Fragment {
+    public static final String TAG = AddAnggota.class.getSimpleName();
     private EditText editTextUsername;
     private EditText editTextName;
     private EditText editTextEmail;
@@ -207,7 +208,7 @@ public class AddAnggota extends Fragment {
                         editTextPassword.setText("");
                         editTextRePassword.setText("");
                         photoUser.setImageResource(0);
-                        backToPreviousFragment();
+                        getActivity().onBackPressed();
                     }
                 },
                 new Response.ErrorListener() {
@@ -281,41 +282,41 @@ public class AddAnggota extends Fragment {
         return temp;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//
+//        getView().setFocusableInTouchMode(true);
+//        getView().requestFocus();
+//        getView().setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View v, int keyCode, KeyEvent event) {
+//                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
+//                    Fragment ListAnggota  = new ListAnggota();
+//                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                    transaction.replace(R.id.content_frame, ListAnggota);
+//                    transaction.commit();
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
+//    }
 
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
-                    Fragment ListAnggota  = new ListAnggota();
-                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.replace(R.id.content_frame, ListAnggota);
-                    transaction.commit();
-                    return true;
-                }
-                return false;
-            }
-        });
-    }
-
-    private void backToPreviousFragment() {
-        Thread thread = new Thread(){
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(3500);
-                    FragmentManager fragmentManager = getFragmentManager();
-                    fragmentManager.beginTransaction().replace(R.id.content_frame,
-                            new ListAnggota()).commit();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        thread.start();
-    }
+//    private void backToPreviousFragment() {
+//        Thread thread = new Thread(){
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(3500);
+//                    FragmentManager fragmentManager = getFragmentManager();
+//                    fragmentManager.beginTransaction().replace(R.id.content_frame,
+//                            new ListAnggota()).commit();
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        };
+//        thread.start();
+//    }
 }

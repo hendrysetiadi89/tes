@@ -62,9 +62,10 @@ public class ListAnggota extends Fragment implements SwipeRefreshLayout.OnRefres
         customFab.setOnFabClickListener(new OnFabClickListener() {
             @Override
             public void onFabClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.content_frame,
-                        new AddAnggota()).commit();
+                        new AddAnggota(),AddAnggota.TAG).addToBackStack(AddAnggota.TAG).commit();
+                Log.i("Test", "test");
             }
         });
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
@@ -150,27 +151,28 @@ public class ListAnggota extends Fragment implements SwipeRefreshLayout.OnRefres
         callVolley();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
 
-        if(getView() == null){
-            return;
-        }
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-
-                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
-                    FragmentManager fragmentManager = getFragmentManager();
-                    fragmentManager.beginTransaction().replace(R.id.content_frame,
-                            new StockInfo()).commit();
-                    return true;
-                }
-                return false;
-            }
-        });
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//
+//        if(getView() == null){
+//            return;
+//        }
+//        getView().setFocusableInTouchMode(true);
+//        getView().requestFocus();
+//        getView().setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View v, int keyCode, KeyEvent event) {
+//
+//                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
+//                    FragmentManager fragmentManager = getFragmentManager();
+//                    fragmentManager.beginTransaction().replace(R.id.content_frame,
+//                            new StockInfo()).commit();
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
+//    }
 }

@@ -170,6 +170,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             if (drawer.isDrawerOpen(GravityCompat.START)) {
                 drawer.closeDrawer(GravityCompat.START);
@@ -191,6 +192,10 @@ public class MainActivity extends AppCompatActivity
                 AlertDialog alert = builder.create();
                 alert.show();
             }
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 
 
@@ -220,7 +225,8 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.user_list) {
             fragmentManager.beginTransaction().replace(R.id.content_frame,
-                    new ListAnggota()).commit();
+                    new ListAnggota(), "ListAnggota").addToBackStack("ListAnggota").commit();
+            Log.i("Test", "test");
         } else if (id == R.id.barang_info) {
             fragmentManager.beginTransaction().replace(R.id.content_frame,
                     new ListItem()).commit();
