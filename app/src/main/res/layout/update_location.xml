@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="40dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txtLocationID"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="0.66">
+
+            <EditText
+                android:id="@+id/nameLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:hint="Name Location"
+                android:inputType="textCapWords"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="@color/input_register_hint" />
+
+            <Spinner
+                android:id="@+id/sp_type_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="@color/input_register_hint" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_marginBottom="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:background="@drawable/border"
+                android:hint="Address"
+                android:textColor="#000000"
+                android:textColorHint="@color/input_register_hint"/>
+
+            <EditText
+                android:id="@+id/latitude"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:hint="Latitude"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="@color/input_register_hint" />
+
+            <EditText
+                android:id="@+id/longitude"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:hint="Longitude"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="@color/input_register_hint" />
+
+            <Button
+                android:id="@+id/btnGetLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/colorPrimary"
+                android:text="View Map"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnUpdateLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/colorPrimary"
+                android:text="Simpan Data"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

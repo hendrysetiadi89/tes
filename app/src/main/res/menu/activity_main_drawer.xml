@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item
+                android:actionMenuTextColor="#666666"
+                android:id="@+id/stock_info"
+                android:icon="@drawable/icon_stok"
+                android:title="INFO STOK" />
+
+            <item
+                android:actionMenuTextColor="#666666"
+                android:id="@+id/item_in"
+                android:icon="@drawable/icon_masuk"
+                android:title="BARANG MASUK" />
+
+            <item
+                android:actionMenuTextColor="#666666"
+                android:id="@+id/item_out"
+                android:icon="@drawable/icon_keluar"
+                android:title="BARANG KELUAR" />
+
+    <group
+        android:id="@+id/group_manajer"
+        android:checkableBehavior="single"
+        android:visible="true">
+        <item
+            android:actionMenuTextColor="#666666"
+            android:id="@+id/barang_info"
+            android:icon="@drawable/icon_product"
+            android:title="DAFTAR BARANG" />
+        <item
+            android:actionMenuTextColor="#666666"
+            android:id="@+id/user_list"
+            android:icon="@drawable/icon_user"
+            android:title="DAFTAR PENGGUNA" />
+        <item
+            android:actionMenuTextColor="#666666"
+            android:id="@+id/location_list"
+            android:icon="@android:drawable/ic_menu_mylocation"
+            android:title="DAFTAR LOKASI" />
+    </group>
+
+    <item
+        android:actionMenuTextColor="#666666"
+        android:id="@+id/logout"
+        android:icon="@drawable/icon_logout"
+        android:title="LOGOUT" />
+</menu>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="0.43"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="115dp"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true" />
+
+            <Button
+                android:id="@+id/btnAddPhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/colorPrimary"
+                android:text="Foto Barang"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/deskripsi"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:background="@drawable/border"
+                android:hint="Deskripsi"
+                android:textColor="#000000"
+                android:textColorHint="@color/input_register_hint" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+        <RadioGroup
+            android:id="@+id/radioGroupTipe"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioProduksi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/input_register"
+                android:checked="true"
+                android:text="Produksi"
+                android:textColor="@color/input_register" />/>
+
+            <RadioButton
+                android:id="@+id/radioPasokan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/input_register"
+                android:text="Pasokan"
+                android:textColor="@color/input_register" />
+        </RadioGroup>
+                </LinearLayout>
+
+        <EditText
+            android:id="@+id/kode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:hint="Kode"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@color/input_register_hint" />
+
+        <EditText
+            android:id="@+id/size"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:hint="Size"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@color/input_register_hint" />
+
+        <EditText
+            android:id="@+id/price"
+            android:inputType="number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:hint="Price"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@color/input_register_hint" />
+
+        <EditText
+            android:id="@+id/cost"
+            android:inputType="number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:hint="Cost"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@color/input_register_hint" />
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/colorPrimary"
+            android:text="Simpan Data"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

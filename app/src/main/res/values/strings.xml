@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Baojili</string>
+    <string name="app_launcher">Baojili</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_add">Tambah Anggota</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+
+    <string name="spinner_title">Select Type</string>
+</resources>

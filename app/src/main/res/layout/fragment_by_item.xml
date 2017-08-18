@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="#ffffff"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/totalStokItem"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Total Stok"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/totalStokLocationItem"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/totalStokItem"
+            android:background="@color/colorPrimary"
+            android:text="Total Stok per Lokasi"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</RelativeLayout>
