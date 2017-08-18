@@ -30,7 +30,7 @@ public class StockByItem extends Fragment {
         btnTotalStokItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.content_frame,
                         new ListTotalStockByItemFragment()).commit();
             }
